@@ -8,3 +8,4 @@ local
 lib
 *.pyc
 pip-selfcheck.json
+newsletter/migrations
