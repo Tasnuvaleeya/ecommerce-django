@@ -5,23 +5,45 @@
 
 
 {% block jumbotron_content %}
+    <div class="row">
+        <div class="col-sm-6">
 
-    <h1>Hello there! @ example</h1>
-    <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive          CSS and HTML, so it also adapts to your viewport and device.</p>
-    <p>To see the difference between static and fixed top navbars, just scroll.</p>
+
+
+    <h1>Trydjango 1.8</h1>
+    <p>This MVP landing project is designed to help you to work more easily.</p>
         <p>
-        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+        <a class="btn btn-lg btn-primary" href="" role="button">Join Us &raquo;</a>
     </p>
+        </div>
+        <div class="col-sm-6" style="background-color: black; height: 300px"></div>
+
+
+
+    </div>
+
 {% endblock %}
 
 {% block content %}
 <div class="row">
-    <div class="col-sm-3 col-md-3">
-    <h1>{{ title }}</h1>
-    <form method="POST" action="">{% csrf_token %}
+
+    <div class="col-xs-3 pull-right">
+        <p class="lead">{{ title }}</p>
+    <form method="POST" action="">
+        {% csrf_token %}
         {{ form|crispy }}
          <input class="btn btn-primary"  type="submit" value="Sign Up"/>
     </form>
+    </div>
+
+      <div class="col-xs-3">
+        <p class="lead">Built with Django &amp; Bootstrap</p>
+    </div>
+      <div class="col-xs-3">
+        <p class="lead">Built with  Bootstrap</p>
+    </div>
+      <div class="col-xs-3">
+        <p class="lead">Built with Django </p>
     </div>
 
 </div>
