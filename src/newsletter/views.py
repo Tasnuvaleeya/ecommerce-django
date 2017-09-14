@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import SignUpForm, ContactForm
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import SignUp
 
 def home(request):
     title = "Sign Up Now"
@@ -25,8 +26,16 @@ def home(request):
             "title": "Thank You"
         }
     if request.user.is_authenticated() and request.user.is_staff:
+        # print SignUp.objects.all()
+        # i=1
+        # for instance in SignUp.objects.all():
+        #     print i
+        #     print instance.full_name
+        #     i +=1
+        queryset = SignUp.objects.all().order_by("-timestamp")
+
         context = {
-            "queryset":[123,456]
+            "queryset":queryset
         }
 
     return render(request, 'home.html', context)
