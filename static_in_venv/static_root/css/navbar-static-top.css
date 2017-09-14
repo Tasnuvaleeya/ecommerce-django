@@ -1,5 +1,5 @@
 body {
-  min-height: 2000px;
+  min-height: 1000px;
 }
 
 .navbar-static-top{
@@ -7,4 +7,21 @@ body {
     background-color: cadetblue;
     border-color: lightseagreen;
 
+}
+.navbar-default .navbar-brand{
+    color : #FFF;
+}
+
+.navbar-default .navbar-brand:hover{
+    color : #777;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+    color : cyan;
+}
+.navbar-default .navbar-toggle{
+    border-color: transparent !important;
+}
+.navbar-toggle:hover{
+    background-color: darkcyan !important;
 }
